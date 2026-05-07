@@ -1,0 +1,7 @@
+setup.py
+ascend_kernel/__init__.py
+ascend_kernel.egg-info/PKG-INFO
+ascend_kernel.egg-info/SOURCES.txt
+ascend_kernel.egg-info/dependency_links.txt
+ascend_kernel.egg-info/top_level.txt
+ascend_kernel/lib/libascend_kernel.so
