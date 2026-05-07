@@ -20,8 +20,8 @@ namespace {
 TORCH_LIBRARY_FRAGMENT(npu, m)
 {
     m.def("set_difference(Tensor a, Tensor b) -> Tensor");
-    m.def("select_empty_slots(Tensor cache_miss_token_mask, Tensor available_slot_mask, Tensor topk_indices_old) -> Tensor");
-    m.def("cache_slot_update(Tensor cache_miss_token_mask, Tensor available_slot_mask, Tensor topk_indices_old, Tensor(a!) topk_indices_new, Tensor(b!) last_step_topk_indices) -> ()");
+    m.def("cache_miss_topk(Tensor cache_miss_token_mask, Tensor(a!) available_slot_mask, Tensor topk_indices_old) -> ()");
+    m.def("get_cache_miss_topk_indices(Tensor(a!) topk_indices, Tensor(b!) last_step_topk_indices, Tensor req_ids_tensor) -> ()");
     m.def("helloworld(Tensor x, Tensor y) -> Tensor");
     m.def("avg_pool3d(Tensor self, int[3] kernel_size, int[3] stride=[], int[3] padding=0, bool ceil_mode=False, bool count_include_pad=True, int? divisor_override=None) -> Tensor");
 
@@ -34,8 +34,8 @@ TORCH_LIBRARY_FRAGMENT(npu, m)
 TORCH_LIBRARY_IMPL(npu, PrivateUse1, m)
 {
     m.impl("set_difference", TORCH_FN(ascend_kernel::set_difference));
-    m.impl("select_empty_slots", TORCH_FN(ascend_kernel::select_empty_slots));
-    m.impl("cache_slot_update", TORCH_FN(ascend_kernel::cache_slot_update));
+    m.impl("cache_miss_topk", TORCH_FN(ascend_kernel::cache_miss_topk));
+    m.impl("get_cache_miss_topk_indices", TORCH_FN(ascend_kernel::get_cache_miss_topk_indices));
     m.impl("helloworld", TORCH_FN(ascend_kernel::helloworld));
     m.impl("avg_pool3d", TORCH_FN(ascend_kernel::avg_pool3d));
 

@@ -9,25 +9,7 @@ from pathlib import Path
 
 import setuptools
 from setuptools import find_namespace_packages
-from setuptools.command.build_ext import build_ext
-from setuptools.dist import Distribution
 from torch_npu.utils.cpp_extension import NpuExtension
-
-
-class BinaryDistribution(Distribution):
-    """Distribution which always forces a binary package with platform name"""
-
-    def has_ext_modules(self):
-        return True
-
-
-class Build(build_ext, object):
-
-    def run(self):
-        self.build_lib = os.path.relpath(os.path.join(BASE_DIR, "build"))
-        self.build_temp = os.path.relpath(os.path.join(BASE_DIR, "build/temp"))
-        self.library_dirs.append(os.path.relpath(os.path.join(BASE_DIR, "build/lib")))
-        super(Build, self).run()
 
 
 WORKING_DIR = Path(__file__).resolve().parent

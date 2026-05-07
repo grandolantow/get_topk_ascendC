@@ -16,15 +16,13 @@ namespace ascend_kernel {
 
 at::Tensor set_difference(const at::Tensor &a, const at::Tensor &b);
 
-at::Tensor select_empty_slots(const at::Tensor &cache_miss_token_mask,
-                              const at::Tensor &available_slot_mask,
-                              const at::Tensor &topk_indices_old);
+void cache_miss_topk(const at::Tensor &cache_miss_token_mask,
+                     at::Tensor &available_slot_mask,
+                     const at::Tensor &topk_indices_old);
 
-void cache_slot_update(const at::Tensor &cache_miss_token_mask,
-                       const at::Tensor &available_slot_mask,
-                       const at::Tensor &topk_indices_old,
-                       at::Tensor &topk_indices_new,
-                       at::Tensor &last_step_topk_indices);
+void get_cache_miss_topk_indices(at::Tensor &topk_indices,
+                                  at::Tensor &last_step_topk_indices,
+                                  const at::Tensor &req_ids_tensor);
 
 at::Tensor helloworld(const at::Tensor &x, const at::Tensor &y);
 

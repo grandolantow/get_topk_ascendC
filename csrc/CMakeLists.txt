@@ -6,7 +6,7 @@ FILE(GLOB OP_SRCS
     ${PROJECT_OP_SRC_BASE}/register.cpp
     ${PROJECT_OP_SRC_BASE}/aclnn/avg_pool3d.cpp
     ${PROJECT_OP_SRC_BASE}/ops/set_difference/op_host/op_host.cpp
-    ${PROJECT_OP_SRC_BASE}/ops/select_empty_slots/op_host/select_empty_slots.cpp
+    ${PROJECT_OP_SRC_BASE}/ops/cache_miss_topk/op_host/cache_miss_topk.cpp
     ${PROJECT_OP_SRC_BASE}/ops/helloworld/op_host/helloworld.cpp
     )
 if(BUILD_CATLASS_MODULE)
@@ -21,7 +21,7 @@ set(OP_PLUGIN_NAME ascend_kernel)
 # kernel side files without workspace
 ascendc_library(no_workspace_kernel STATIC
     ${PROJECT_OP_SRC_BASE}/ops/set_difference/op_kernel/op_kernel.cpp
-    ${PROJECT_OP_SRC_BASE}/ops/select_empty_slots/op_kernel/select_empty_slots.cpp
+    ${PROJECT_OP_SRC_BASE}/ops/cache_miss_topk/op_kernel/cache_miss_topk.cpp
     ${PROJECT_OP_SRC_BASE}/ops/helloworld/op_kernel/kernel_helloworld.cpp
 )
 
