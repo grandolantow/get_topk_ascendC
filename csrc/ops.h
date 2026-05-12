@@ -14,12 +14,6 @@
 
 namespace ascend_kernel {
 
-at::Tensor set_difference(const at::Tensor &a, const at::Tensor &b);
-
-void cache_miss_topk(const at::Tensor &cache_miss_token_mask,
-                     at::Tensor &available_slot_mask,
-                     const at::Tensor &topk_indices_old);
-
 void get_cache_miss_topk_indices(at::Tensor &topk_indices,
                                   at::Tensor &last_step_topk_indices,
                                   const at::Tensor &req_ids_tensor);

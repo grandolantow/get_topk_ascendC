@@ -5,7 +5,6 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/python/ascend_kernel/as
 FILE(GLOB OP_SRCS
     ${PROJECT_OP_SRC_BASE}/register.cpp
     ${PROJECT_OP_SRC_BASE}/aclnn/avg_pool3d.cpp
-    ${PROJECT_OP_SRC_BASE}/ops/set_difference/op_host/op_host.cpp
     ${PROJECT_OP_SRC_BASE}/ops/cache_miss_topk/op_host/cache_miss_topk.cpp
     ${PROJECT_OP_SRC_BASE}/ops/helloworld/op_host/helloworld.cpp
     )
@@ -20,7 +19,6 @@ set(OP_PLUGIN_NAME ascend_kernel)
 
 # kernel side files without workspace
 ascendc_library(no_workspace_kernel STATIC
-    ${PROJECT_OP_SRC_BASE}/ops/set_difference/op_kernel/op_kernel.cpp
     ${PROJECT_OP_SRC_BASE}/ops/cache_miss_topk/op_kernel/cache_miss_topk.cpp
     ${PROJECT_OP_SRC_BASE}/ops/helloworld/op_kernel/kernel_helloworld.cpp
 )
