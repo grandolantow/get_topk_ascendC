@@ -1,0 +1,13 @@
+# Target labels
+ no_workspace_kernel_precompile
+# Source files and their labels
+/home/s886374/kvoffload/ascend-kernel/build/csrc/CMakeFiles/no_workspace_kernel_precompile
+/home/s886374/kvoffload/ascend-kernel/build/csrc/CMakeFiles/no_workspace_kernel_precompile.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/CMakeFiles/no_workspace_kernel_precompile-complete.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_precompile-prefix/src/no_workspace_kernel_precompile-stamp/no_workspace_kernel_precompile-build.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_precompile-prefix/src/no_workspace_kernel_precompile-stamp/no_workspace_kernel_precompile-configure.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_precompile-prefix/src/no_workspace_kernel_precompile-stamp/no_workspace_kernel_precompile-download.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_precompile-prefix/src/no_workspace_kernel_precompile-stamp/no_workspace_kernel_precompile-install.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_precompile-prefix/src/no_workspace_kernel_precompile-stamp/no_workspace_kernel_precompile-mkdir.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_precompile-prefix/src/no_workspace_kernel_precompile-stamp/no_workspace_kernel_precompile-patch.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_precompile-prefix/src/no_workspace_kernel_precompile-stamp/no_workspace_kernel_precompile-update.rule

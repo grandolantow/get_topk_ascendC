@@ -1,0 +1,2 @@
+/usr/bin/ar qc libno_workspace_kernel_interface.a CMakeFiles/no_workspace_kernel_interface.dir/no_workspace_kernel_stub.cpp.o
+/usr/bin/ranlib libno_workspace_kernel_interface.a

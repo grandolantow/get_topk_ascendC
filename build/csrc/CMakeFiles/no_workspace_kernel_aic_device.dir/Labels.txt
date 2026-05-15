@@ -1,0 +1,13 @@
+# Target labels
+ no_workspace_kernel_aic_device
+# Source files and their labels
+/home/s886374/kvoffload/ascend-kernel/build/csrc/CMakeFiles/no_workspace_kernel_aic_device
+/home/s886374/kvoffload/ascend-kernel/build/csrc/CMakeFiles/no_workspace_kernel_aic_device.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/CMakeFiles/no_workspace_kernel_aic_device-complete.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_aic_device-prefix/src/no_workspace_kernel_aic_device-stamp/no_workspace_kernel_aic_device-build.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_aic_device-prefix/src/no_workspace_kernel_aic_device-stamp/no_workspace_kernel_aic_device-configure.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_aic_device-prefix/src/no_workspace_kernel_aic_device-stamp/no_workspace_kernel_aic_device-download.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_aic_device-prefix/src/no_workspace_kernel_aic_device-stamp/no_workspace_kernel_aic_device-install.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_aic_device-prefix/src/no_workspace_kernel_aic_device-stamp/no_workspace_kernel_aic_device-mkdir.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_aic_device-prefix/src/no_workspace_kernel_aic_device-stamp/no_workspace_kernel_aic_device-patch.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_aic_device-prefix/src/no_workspace_kernel_aic_device-stamp/no_workspace_kernel_aic_device-update.rule

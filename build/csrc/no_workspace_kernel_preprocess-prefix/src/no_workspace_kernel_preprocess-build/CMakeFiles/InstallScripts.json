@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_preprocess-prefix/src/no_workspace_kernel_preprocess-build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
