@@ -35,57 +35,6 @@ os.environ["TORCH_EXTENSIONS_ALWAYS_BUILD"] = "1"
 os.environ['CXX'] = 'clang++'
 os.environ['CC'] = 'clang'
 
-"""
-# _abs_path = os.path.dirname(os.path.abspath(__file__))
-_abs_path = "/home/z00911889/sglang/python/sglang/srt/hardware_backend/npu/attention"
-hgemm_path = os.path.join(_abs_path, "hgemm")
-
-
-sources = [
-    f"{_abs_path}/cpu_sparse_attn.cpp",
-]
-
-# 添加 hgemm 的源文件
-hgemm_sources = [
-    "attn.cpp",
-    "gemm.cpp",
-    "softmax.cpp",
-    "barrier.cpp",
-    "util.cpp",
-]
-
-for src in hgemm_sources:
-    src_full_path = os.path.join(hgemm_path, src)
-    if os.path.exists(src_full_path):
-        sources.append(src_full_path)
-
-print(f">>>>> start load sparse_attn, srcs: {sources}")
-cpu_sparse_attn = load(
-    name="cpu_sparse_attn",
-    sources=sources,
-    extra_cflags=[
-        "-O3",
-        "-std=c++20",
-        "-fopenmp",
-        "-march=armv8.2-a+sve+fp16+bf16",
-        "-fPIC",
-        f"-I{hgemm_path}",  # 添加包含路径
-        f"-I{npu_include_path}",
-        f"-I{torch_npu_include}",
-    ],
-    # extra_ldflags=["-fopenmp"],
-    extra_ldflags=[
-        "-fopenmp",
-        f"-L{npu_lib_path}",
-        "-lascendcl",
-        f"-L{torch_npu_lib_path}",
-        "-ltorch_npu",
-    ],
-    verbose=True,  # 添加 verbose 查看编译过程
-)
-print(">>>>> done load sparse_attn")
-"""
-
 cpu_sparse_attn = load(
     name="cpu_sparse_attn",
     sources=["/home/s886374/kvoffload/ascend-kernel/tests/cpu_sparse_attn.cpp"],
@@ -94,6 +43,7 @@ cpu_sparse_attn = load(
         "-std=c++20",
         "-fopenmp",
         "-march=armv8.2-a+sve+fp16+bf16",
+        # "-march=native",
         "-fPIC",
         # f"-I{hgemm_path}",  # 添加包含路径
         f"-I{npu_include_path}",
@@ -158,7 +108,25 @@ print(f'>>>>> py get_kv_topk start, num tokens to load: {(topk_idx >= 0).sum().i
 # k_nope_topk, k_pe_topk = sparse_attn.get_kv_topk(k_nope, k_pe, topk_idx, actual_seq_qlen, block_table, thread_num)
 k_nope_topk = torch.empty([bs, 2048, 1, 512], dtype=torch.bfloat16, device='cpu', pin_memory=True)
 k_pe_topk = torch.empty([bs, 2048, 1, 64], dtype=torch.bfloat16, device='cpu', pin_memory=True)
-sparse_attn.get_kv_topk(k_nope, k_pe, topk_idx, actual_seq_qlen, block_table, thread_num, k_nope_topk, k_pe_topk)
+args = (
+    k_nope.data_ptr(),
+    k_pe.data_ptr(),
+    topk_idx.data_ptr(),
+    actual_seq_qlen.data_ptr(),
+    block_table.data_ptr(),
+    k_nope_topk.data_ptr(),
+    k_pe_topk.data_ptr(),
+    k_nope.shape,
+    k_pe.shape,
+    topk_idx.shape,
+    actual_seq_qlen.shape,
+    block_table.shape,
+    k_nope_topk.shape,
+    k_pe_topk.shape,
+    thread_num,
+)
+# sparse_attn.get_kv_topk(k_nope, k_pe, topk_idx, actual_seq_qlen, block_table, thread_num, k_nope_topk, k_pe_topk)
+sparse_attn.get_kv_topk(*args)
 
 k_nope_topk_gold[~valid_mask] = 0; k_pe_topk_gold[~valid_mask] = 0
 k_nope_topk[~valid_mask] = 0; k_pe_topk[~valid_mask] = 0
@@ -167,17 +135,14 @@ print(
     f'k_nope = {k_nope_topk.shape}, equal = {torch.equal(k_nope_topk_gold, k_nope_topk)}; '
     f'k_pe = {k_pe_topk.shape}, equal = {torch.equal(k_pe_topk_gold, k_pe_topk)}'
 )
-# print(f'>>>>> py get_kv_topk done, k_nope = {k_nope_topk}, k_pe = {k_pe_topk}')
-
-# sparse_attn.test()
 
 repeat = 100
 time_start = time.time()
 for _ in range(repeat):
-    k_nope_topk, k_pe_topk = sparse_attn.get_kv_topk(k_nope, k_pe, topk_idx, actual_seq_qlen, block_table, thread_num)
+    sparse_attn.get_kv_topk(*args)
 time_end = time.time()
 time_avg = (time_end - time_start) / repeat
-print(f'>>>>> bs={bs}, avg time: {time_avg * 1000} ms')
+print(f'>>>>> bs={bs}, thread_num={thread_num}, sparse_ratio={sparse_ratio}, avg time: {time_avg * 1000} ms')
 
 # bs1: 0.21-0.25 ms, 10GB/s
 #   bs1 sparse 50%, 0.1 ms
@@ -197,3 +162,10 @@ print(f'>>>>> bs={bs}, avg time: {time_avg * 1000} ms')
 # time_start = time.time()
 # time_end = time.time()
 # (time_end - time_start) * 1000
+
+
+# 90.90.97.29
+# >>>>> bs=4, thread_num=1, sparse_ratio=0.0, avg time: 1.5247583389282227 ms
+# >>>>> bs=4, thread_num=8, sparse_ratio=0.0, avg time: 0.26349782943725586 ms
+# >>>>> bs=4, thread_num=16, sparse_ratio=0.0, avg time: 0.15278100967407227 ms
+# >>>>> bs=4, thread_num=16, sparse_ratio=0.9, avg time: 0.030124187469482422 ms

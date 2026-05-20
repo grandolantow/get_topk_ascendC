@@ -1,0 +1,6 @@
+已清理缓存目录: /root/.cache/torch_extensions/py311_cpu/cpu_sparse_attn
+[1/2] clang++ -MMD -MF cpu_sparse_attn.o.d -DTORCH_EXTENSION_NAME=cpu_sparse_attn -DTORCH_API_INCLUDE_EXTENSION_H -isystem /usr/local/python3.11.10/lib/python3.11/site-packages/torch/include -isystem /usr/local/python3.11.10/lib/python3.11/site-packages/torch/include/torch/csrc/api/include -isystem /usr/local/python3.11.10/include/python3.11 -fPIC -std=c++17 -O3 -std=c++20 -fopenmp -march=armv8.2-a+sve+fp16+bf16 -fPIC -I/usr/local/Ascend/ascend-toolkit/latest/include -I/usr/local/python3.11.10/lib/python3.11/site-packages/torch_npu/include -c /home/s886374/kvoffload/ascend-kernel/tests/cpu_sparse_attn.cpp -o cpu_sparse_attn.o 
+[2/2] clang++ cpu_sparse_attn.o -shared -fopenmp -L/usr/local/Ascend/ascend-toolkit/latest/lib64 -lascendcl -L/usr/local/python3.11.10/lib/python3.11/site-packages/torch_npu/lib -ltorch_npu -L/usr/local/python3.11.10/lib/python3.11/site-packages/torch/lib -lc10 -ltorch_cpu -ltorch -ltorch_python -o cpu_sparse_attn.so
+>>>>> py get_kv_topk start, num tokens to load: 4142
+>>>>> py get_kv_topk done, k_nope = torch.Size([4, 2048, 1, 512]), equal = True; k_pe = torch.Size([4, 2048, 1, 64]), equal = True
+>>>>> bs=4, thread_num=16, sparse_ratio=0.5, avg time: 0.04592180252075195 ms
