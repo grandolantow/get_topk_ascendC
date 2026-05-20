@@ -1,0 +1,4 @@
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_precompile-prefix/src/no_workspace_kernel_precompile-build/CMakeFiles/precompile_obj.dir
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_precompile-prefix/src/no_workspace_kernel_precompile-build/CMakeFiles/check_src_template.dir
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_precompile-prefix/src/no_workspace_kernel_precompile-build/CMakeFiles/edit_cache.dir
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_precompile-prefix/src/no_workspace_kernel_precompile-build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,4 @@
+/home/s886374/kvoffload/ascend-kernel/output/lib/libno_workspace_kernel.a
+/home/s886374/kvoffload/ascend-kernel/output/include/no_workspace_kernel/aclrtlaunch_triple_chevrons_func.h
+/home/s886374/kvoffload/ascend-kernel/output/include/no_workspace_kernel/aclrtlaunch_helloworld.h
+/home/s886374/kvoffload/ascend-kernel/output/include/no_workspace_kernel/aclrtlaunch_cache_miss_topk.h

@@ -1,0 +1,13 @@
+# Target labels
+ no_workspace_kernel_host
+# Source files and their labels
+/home/s886374/kvoffload/ascend-kernel/build/csrc/CMakeFiles/no_workspace_kernel_host
+/home/s886374/kvoffload/ascend-kernel/build/csrc/CMakeFiles/no_workspace_kernel_host.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/CMakeFiles/no_workspace_kernel_host-complete.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_host-prefix/src/no_workspace_kernel_host-stamp/no_workspace_kernel_host-build.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_host-prefix/src/no_workspace_kernel_host-stamp/no_workspace_kernel_host-configure.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_host-prefix/src/no_workspace_kernel_host-stamp/no_workspace_kernel_host-download.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_host-prefix/src/no_workspace_kernel_host-stamp/no_workspace_kernel_host-install.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_host-prefix/src/no_workspace_kernel_host-stamp/no_workspace_kernel_host-mkdir.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_host-prefix/src/no_workspace_kernel_host-stamp/no_workspace_kernel_host-patch.rule
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_host-prefix/src/no_workspace_kernel_host-stamp/no_workspace_kernel_host-update.rule

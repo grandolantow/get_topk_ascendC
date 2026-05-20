@@ -1,0 +1,4 @@
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_aiv_device-prefix/src/no_workspace_kernel_aiv_device-build/CMakeFiles/device_aiv_obj.dir
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_aiv_device-prefix/src/no_workspace_kernel_aiv_device-build/CMakeFiles/merge_aiv_device_obj.dir
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_aiv_device-prefix/src/no_workspace_kernel_aiv_device-build/CMakeFiles/edit_cache.dir
+/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_aiv_device-prefix/src/no_workspace_kernel_aiv_device-build/CMakeFiles/rebuild_cache.dir

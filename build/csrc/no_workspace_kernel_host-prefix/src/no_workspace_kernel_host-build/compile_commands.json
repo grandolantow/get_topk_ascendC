@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_host-prefix/src/no_workspace_kernel_host-build",
+  "command": "/usr/local/Ascend/ascend-toolkit/latest/tools/ccec_compiler/bin/bisheng -DTILING_KEY_VAR=0 -DONE_CORE_DUMP_SIZE=1048576 -I/usr/local/Ascend/ascend-toolkit/latest/tools/tikcpp/tikcfw -I/usr/local/Ascend/ascend-toolkit/latest/tools/tikcpp/tikcfw/interface -I/usr/local/Ascend/ascend-toolkit/latest/tools/tikcpp/tikcfw/impl -O3 -DNDEBUG -include /home/s886374/kvoffload/ascend-kernel/build/include/no_workspace_kernel/aclrtlaunch_triple_chevrons_func.h -O3 -std=c++17 --cce-aicore-lang -include /usr/local/Ascend/ascend-toolkit/latest/tools/../include/version/cann_version.h -fPIC --cce-host-only -fcce-kernel-launch-custom -o CMakeFiles/host_bisheng_obj.dir/home/s886374/kvoffload/ascend-kernel/csrc/ops/cache_miss_topk/op_kernel/cache_miss_topk.cpp.o -c /home/s886374/kvoffload/ascend-kernel/csrc/ops/cache_miss_topk/op_kernel/cache_miss_topk.cpp",
+  "file": "/home/s886374/kvoffload/ascend-kernel/csrc/ops/cache_miss_topk/op_kernel/cache_miss_topk.cpp",
+  "output": "CMakeFiles/host_bisheng_obj.dir/home/s886374/kvoffload/ascend-kernel/csrc/ops/cache_miss_topk/op_kernel/cache_miss_topk.cpp.o"
+},
+{
+  "directory": "/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_host-prefix/src/no_workspace_kernel_host-build",
+  "command": "/usr/local/Ascend/ascend-toolkit/latest/tools/ccec_compiler/bin/bisheng -DTILING_KEY_VAR=0 -DONE_CORE_DUMP_SIZE=1048576 -I/usr/local/Ascend/ascend-toolkit/latest/tools/tikcpp/tikcfw -I/usr/local/Ascend/ascend-toolkit/latest/tools/tikcpp/tikcfw/interface -I/usr/local/Ascend/ascend-toolkit/latest/tools/tikcpp/tikcfw/impl -O3 -DNDEBUG -include /home/s886374/kvoffload/ascend-kernel/build/include/no_workspace_kernel/aclrtlaunch_triple_chevrons_func.h -O3 -std=c++17 --cce-aicore-lang -include /usr/local/Ascend/ascend-toolkit/latest/tools/../include/version/cann_version.h -fPIC --cce-host-only -fcce-kernel-launch-custom -o CMakeFiles/host_bisheng_obj.dir/home/s886374/kvoffload/ascend-kernel/csrc/ops/helloworld/op_kernel/kernel_helloworld.cpp.o -c /home/s886374/kvoffload/ascend-kernel/csrc/ops/helloworld/op_kernel/kernel_helloworld.cpp",
+  "file": "/home/s886374/kvoffload/ascend-kernel/csrc/ops/helloworld/op_kernel/kernel_helloworld.cpp",
+  "output": "CMakeFiles/host_bisheng_obj.dir/home/s886374/kvoffload/ascend-kernel/csrc/ops/helloworld/op_kernel/kernel_helloworld.cpp.o"
+}
+]

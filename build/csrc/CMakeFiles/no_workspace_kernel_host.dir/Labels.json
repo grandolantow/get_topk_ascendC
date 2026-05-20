@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/s886374/kvoffload/ascend-kernel/build/csrc/CMakeFiles/no_workspace_kernel_host"
+		},
+		{
+			"file" : "/home/s886374/kvoffload/ascend-kernel/build/csrc/CMakeFiles/no_workspace_kernel_host.rule"
+		},
+		{
+			"file" : "/home/s886374/kvoffload/ascend-kernel/build/csrc/CMakeFiles/no_workspace_kernel_host-complete.rule"
+		},
+		{
+			"file" : "/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_host-prefix/src/no_workspace_kernel_host-stamp/no_workspace_kernel_host-build.rule"
+		},
+		{
+			"file" : "/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_host-prefix/src/no_workspace_kernel_host-stamp/no_workspace_kernel_host-configure.rule"
+		},
+		{
+			"file" : "/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_host-prefix/src/no_workspace_kernel_host-stamp/no_workspace_kernel_host-download.rule"
+		},
+		{
+			"file" : "/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_host-prefix/src/no_workspace_kernel_host-stamp/no_workspace_kernel_host-install.rule"
+		},
+		{
+			"file" : "/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_host-prefix/src/no_workspace_kernel_host-stamp/no_workspace_kernel_host-mkdir.rule"
+		},
+		{
+			"file" : "/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_host-prefix/src/no_workspace_kernel_host-stamp/no_workspace_kernel_host-patch.rule"
+		},
+		{
+			"file" : "/home/s886374/kvoffload/ascend-kernel/build/csrc/no_workspace_kernel_host-prefix/src/no_workspace_kernel_host-stamp/no_workspace_kernel_host-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"no_workspace_kernel_host"
+		],
+		"name" : "no_workspace_kernel_host"
+	}
+}

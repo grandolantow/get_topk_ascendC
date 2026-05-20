@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: ascend-kernel
+Version: 2026.3.9
+Summary: python api for ascend_kernel
+License: BSD 3 License
+Requires-Python: >=3.7
+Dynamic: license
+Dynamic: requires-python
+Dynamic: summary
